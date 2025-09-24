@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VividTodo</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div id="app" class="vivid-todo">
+        <!-- Header Section -->
+        <header role="banner" class="header">
+            <h1>VividTodo</h1>
+            <input id="new-todo" type="text" placeholder="What needs to be done?" autocomplete="off" aria-label="New todo" />
+        </header>
+
+        <!-- Toolbar / Filters -->
+        <section class="toolbar" aria-label="Todo filters" role="toolbar">
+            <button data-filter="all" class="filter-btn active" aria-pressed="true">All</button>
+            <button data-filter="active" class="filter-btn" aria-pressed="false">Active</button>
+            <button data-filter="completed" class="filter-btn" aria-pressed="false">Completed</button>
+        </section>
+
+        <!-- Todo List -->
+        <ul id="todo-list" class="todo-list" role="list" aria-live="polite">
+            <!-- Todo items will be injected here as <li role="listitem"> elements -->
+        </ul>
+
+        <!-- Footer -->
+        <footer role="contentinfo" class="footer">
+            <button id="clear-completed" aria-label="Clear completed todos">Clear Completed</button>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
